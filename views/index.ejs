@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="todo">
+        <h1>
+            <%= listTitle %>
+        </h1>
+
+        <div class="container">
+            <ul>
+                <% newlistitems.forEach(function(item){ %>
+                    <form name="form" action="/action_one" method="post">
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <p class="item" name="item">
+                                    <%= item.name %>
+                                </p>
+                            </label>
+                            <button id="delete" name="delete" type="submit" value="<%=item._id%>"></button>
+                            <input type="hidden" name="listName" value="<%= listTitle %>">
+                        </li>
+                    </form>
+                    <% }) %>
+            </ul>
+        </div>
+
+        <form action="/action_two" method="post">
+            <input type="text" name="newitem" placeholder="New Item" autofocus required>
+            <button type="submit" name="list" value="<%= listTitle %>">SUBMIT</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #A683E3 20%, #E4E9FD 50%);
+    min-height: 1000px;
+    font-family: 'helvetica neue';
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.todo {
+    position: relative;
+    left: 20px;
+    top: 450px;
+    width: 420px;
+}
+
+h1 {
+    color: #fff;
+    padding: 10px;
+    background-color: #A683E3;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.container {
+    border: 2px solid red;
+    border-radius: 5px;
+    min-width: 200px;
+    min-height: 100px;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style-type: none; 
+}
+
+li {
+    margin-bottom: 2px;
+}
+
+.item {
+    display: inline;
+}
+
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: #A683E3;
+}
+
+#delete {
+    position: absolute;
+    right: 22px;
+}
